@@ -1,54 +1,56 @@
 body {
-    background-color: #000000;
-    font-family: Arial, sans-serif;
-    color: grey;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: #000000; /* Sets the page background to black */
+    font-family: Arial, sans-serif; /* Easy to read font */
+    color: white; /* Default text color across the page */
+    margin: 0; /* Removes default browser space around the edges */
+    padding: 0; /* Removes inner spacing on the page */
+    display: flex; /* Turns on Flexbox layout mode */
+    flex-direction: column; /* Stacks elements vertically: Header, then Content, then Footer */
+    min-height: 100vh; /* Makes the page at least 100% of the screen height */
 }
 
 header {
-    background-color: rgb(206, 206, 206);
-    color: black;
-    padding: 25px;
-    text-align: center;
+    background-color: rgb(206, 206, 206); /* Light gray background */
+    color: black; /* Black text */
+    padding: 25px; /* 25px space inside around the header text */
+    text-align: center; /* Centers the header text horizontally */
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    gap: 50px;
-    background-color: grey;
-    color: white;
+    display: flex; /* Arranges navigation links in a row */
+    justify-content: center; /* Centers the links horizontally */
+    align-items: center; /* Centers the links vertically */
+    padding: 5px; /* Small space inside the top and bottom of the nav bar */
+    gap: 50px; /* Puts 50px of empty space between each link */
+    background-color: grey; /* Gray background for the menu bar */
+    color: white; /* Default text color */
     
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
+    color: white; /* Link text color */
+    text-decoration: none; /* Removes the default underline from links */
+    padding: 15px; /* Adds clickable area around the link text */
 }
 
 nav a:hover,
 nav a.active {
-    color: grey;
-    background-color: white;
+    color: grey; /* Changes link text to gray */
+    background-color: white; /* Gives the link a white highlighted box */
 
 }
 
 footer {
     
-    background-color: rgb(206, 206, 206);
-    color: black;
-    padding: 15px;
-    text-align: center;
+    background-color: rgb(206, 206, 206); /* Matches the light gray header */
+    color: black; /* Black text */
+    padding: 15px; /* Spacing inside the footer */
+    text-align: center; /* Centers the footer text */
 
 }
 
 .content {
-    flex: 1;
+    flex: 1; /* Grows to fill all empty space, pushing the footer to the bottom */
+    padding: 2rem 16rem; /* 2rem space on Top/Bottom; 16rem space on Left/Right */
 }
+
