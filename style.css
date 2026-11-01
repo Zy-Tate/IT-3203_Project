@@ -54,3 +54,7 @@ footer {
     padding: 2rem 16rem; /* 2rem space on Top/Bottom; 16rem space on Left/Right */
 }
 
+.center {
+    text-align: center; /* Centers the text within the .special class */
+}
+
