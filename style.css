@@ -49,6 +49,10 @@ footer {
 
 }
 
+a {
+    color: white;
+}
+
 .content {
     flex: 1; /* Grows to fill all empty space, pushing the footer to the bottom */
     padding: 2rem 16rem; /* 2rem space on Top/Bottom; 16rem space on Left/Right */
