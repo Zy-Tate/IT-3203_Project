@@ -63,3 +63,28 @@ footer {
     top: 0; /* Positions the top bar at the very top of the page */
     z-index: 1000; /* Keeps the bar floating above other content */
 }
+
+.bubble-stack {
+    display: flex; 
+    flex-direction: column; /* Stacks the bubbles vertically */
+    align-items: center; /* Centers the bubbles horizontally */
+    gap: 2.5rem; /* Space between each bubble */
+    width: 100%;
+}
+
+.bubble {
+    width: 80%;
+    max-width: 1200px;
+    padding: 1.25rem 2rem; /* Adds padding inside the bubble */
+    border-radius: 9999px; /* Gives the rounded shape */
+    background-color: rgb(206, 206, 206); /* Light gray background for the bubble */
+    color: black; /* Black text inside the bubble */
+    text-align: center;
+
+}
+
+.bubble:hover {
+    background-color: grey; /* Slightly darker gray background on hover */
+    color: white; 
+
+}
