@@ -24,3 +24,31 @@ let timer = setInterval(function () {
         timerText.textContent = mins + ":" + secs; // Updates text on page
     }
 }, 1000);
+
+// Submits quiz on button click
+quizForm.onsubmit = function (e) {
+    e.preventDefault(); // Stops page from reloading
+    submitQuiz();
+};
+
+// Reloads page to retake quiz
+retakeButton.onclick = function () {
+    location.reload();
+};
+
+function submitQuiz() {
+    if (isDone) {
+        return;
+    }
+    isDone = true;
+    clearInterval(timer); // Stops timer
+
+    // Calculate time spent
+    let timeSpent = totalSeconds - secondsLeft;
+    let spentMins = Math.floor(timeSpent / 60);
+    let spentSecs = timeSpent % 60;
+    let timeResult = spentMins + " minute(s), " + spentSecs + " second(s)";
+
+    let score = 0;
+    let breakdownHTML = "";
+    
