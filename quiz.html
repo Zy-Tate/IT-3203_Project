@@ -22,7 +22,41 @@
         </nav>
         </div>
         <main class = content> <!-- class="content" connects to the .content CSS rule for spacing and layout -->
-            
+            <div class="quiz-header-bar"> <!-- Top summary bar showing question count and timer -->
+                <div><strong>Questions:</strong> 10 | <strong>Passing Score:</strong> 70%</div>
+                <div class="timer-display">Time Remaining: <span id="timer">10:00</span></div> <!-- Shows countdown timer -->
+            </div>
+
+            <form id="privacyQuiz" novalidate> <!-- Form container holding all quiz questions -->
+                <!-- Question 1: Fill-in -->
+                <div class="q-card"> <!-- Card container for question 1 -->
+                    <h3>1. Software development kits used by companies to track user behavior are commonly called ________.</h3>
+                    <input type="text" name="q1" class="text-answer-input" placeholder="Your answer..."> <!-- Text input for answer -->
+                </div>
+
+                <!-- Question 2: Fill-in -->
+                <div class="q-card"> <!-- Card container for question 2 -->
+                    <h3>2. ISP stands for Internet ________ Provider.</h3>
+                    <input type="text" name="q2" class="text-answer-input" placeholder="Your answer..."> <!-- Text input for answer -->
+                </div>
+
+                <!-- Question 3: Fill-in -->
+                <div class="q-card"> <!-- Card container for question 3 -->
+                    <h3>3. The practice where retailers, travel sites, and lenders adjust prices based on a customer's estimated willingness to pay is called ________ pricing.</h3>
+                    <input type="text" name="q3" class="text-answer-input" placeholder="Your answer..."> <!-- Text input for answer -->
+                </div>
+
+                <!-- Question 4: Fill-in -->
+                <div class="q-card"> <!-- Card container for question 4 -->
+                    <h3>4. Malware is short for ________ software.</h3>
+                    <input type="text" name="q4" class="text-answer-input" placeholder="Your answer..."> <!-- Text input for answer -->
+                </div>
+
+                <!-- Question 5: Fill-in -->
+                <div class="q-card"> <!-- Card container for question 5 -->
+                    <h3>5. Internet cookies are small ________ files created by web servers and stored on your browser to identify your device during sessions.</h3>
+                    <input type="text" name="q5" class="text-answer-input" placeholder="Your answer..."> <!-- Text input for answer -->
+                </div>
         </main>
         <footer><p>This is a class project | <a href="https://ksuweb.github.io/IT3203/">https://ksuweb.github.io/IT3203/</a></p></footer>
         <script src="quiz.js"></script> <!-- Connects this page to the quiz JavaScript file -->
