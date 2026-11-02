@@ -129,3 +129,35 @@ function submitQuiz() {
     if (q10C) q10UserAnswer.push("C");
     if (q10D) q10UserAnswer.push("D");
     breakdownHTML += makeItemHTML(10, q10Correct, q10UserAnswer.length ? q10UserAnswer.join(", ") : "(None)", "A, B, and C");
+
+    // Set Pass or Fail status
+    let passStatus = document.getElementById("passFailStatus");
+    if (score >= 7) {
+        passStatus.textContent = "PASSED";
+        passStatus.className = "result-pass";
+    } else {
+        passStatus.textContent = "FAILED";
+        passStatus.className = "result-fail";
+    }
+
+    // Set numbers and time spent in the modal
+    document.getElementById("scoreText").textContent = score;
+    document.getElementById("timeSpentText").textContent = timeResult;
+    document.getElementById("answersBreakdown").innerHTML = breakdownHTML;
+
+    // Show modal popup
+    document.getElementById("resultsModal").style.display = "block";
+}
+
+// Simple helper function to build basic HTML cards for each question
+function makeItemHTML(qNum, isCorrect, userAns, realAns) {
+    let cardClass = isCorrect ? "breakdown-item correct-card" : "breakdown-item incorrect-card";
+    let textClass = isCorrect ? "result-pass" : "result-fail";
+    let resultLabel = isCorrect ? "Correct" : "Incorrect";
+
+    return '<div class="' + cardClass + '">' +
+        '<p><strong>Question ' + qNum + ':</strong> <span class="' + textClass + '">' + resultLabel + '</span></p>' +
+        '<p><strong>Your Answer:</strong> ' + (userAns === "" ? "(Empty)" : userAns) + '</p>' +
+        '<p><strong>Correct Answer:</strong> ' + realAns + '</p>' +
+        '</div>';
+}
